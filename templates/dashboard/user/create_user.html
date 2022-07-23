@@ -1,0 +1,248 @@
+<!--
+
+=========================================================
+* Innoovatum
+=========================================================
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Primary Meta Tags -->
+<title>Innoovatum Sign Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="Innoovatum">
+<meta name="author" content="Innoovatum">
+
+<link rel="canonical" href="https://themesberg.com/product/ui-kits/neumorphism-ui/" />
+
+<!--  Social tags -->
+<meta name="keywords" content="Innoovatum, Search engine, Engineering, cse,civil, automobile,EC,EE,IOT">
+<meta name="description" content="Engineering Search Engine">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Innoovatum Search Engine">
+<meta itemprop="description" content="Making engineering education a practical approach">
+<meta itemprop="image" content="">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="search engine">
+<meta name="twitter:site" content="@Innoovatum">
+<meta name="twitter:title" content="Innoovatum Search Engine">
+<meta name="twitter:description" content="Making engineering education a practical approach">
+<meta name="twitter:creator" content="@innoovatum">
+<meta name="twitter:image" content="">
+
+<!-- Open Graph data -->
+<meta property="fb:app_id" content="Innoovatum">
+<meta property="og:title" content="Innoovatum Search Engine" />
+<meta property="og:type" content="Search" />
+<meta property="og:url" content="https://innoovatum.com" />
+<meta property="og:image" content=""/>
+<meta property="og:description" content="Making engineering education a practical approach" />
+<meta property="og:site_name" content="Innoovatum" />
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/img/favicon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+<link rel="manifest" href="{% static 'assets/img/favicon/site.webmanifest' %}">
+<link rel="mask-icon" href="{% static 'assets/img/favicon/safari-pinned-tab.svg' %}" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Fontawesome -->
+<link type="text/css" href="{% static 'vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+
+<!-- Pixel CSS -->
+<link type="text/css" href="{% static 'css/neumorphism.css' %}" rel="stylesheet">
+
+<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+</head>
+
+<body>
+    <header class="header-global">
+        <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
+            <div class="container position-relative">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="">
+                    <img class="navbar-brand-dark" src="{% static 'assets/img/brand/dark.svg' %}" alt="Logo light">
+                    <img class="navbar-brand-light" src="{% static 'assets/img/brand/dark.svg' %}" alt="Logo dark">
+                </a>
+                <div class="navbar-collapse collapse" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
+                                    <img src="{% static 'assets/img/brand/dark.svg' %}" alt="Themesberg logo">
+                                </a>
+                            </div>
+                            <div class="col-6 collapse-close">
+                                <a href="#navbar_global" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="d-flex align-items-center"> 
+                  <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>   
+    <main>
+        <!-- Section -->
+        <section class="min-vh-100 d-flex bg-primary align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6 justify-content-center">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <div class="card-header text-center pb-0">
+                                {% if messages %}
+                            <div class="messages" >
+                            {% for message in messages %}
+                                <div class="alert alert-secondary" {% if message.tags %}
+                                class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+                                {% endfor %}
+                                </div>
+                            {% else %}
+                            <div class="text-center">
+                                <h2 class="mb-0 h5">Create Account</h2>
+                            </div>
+                            {% endif %}                               
+                            </div>
+                            <div class="card-body">
+                                <form  method="POST" class="user">
+                                    {% csrf_token %}
+                                    <!-- Form -->
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">First Name</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fa-solid fa-user-astronaut"></span></span>
+                                            </div>
+                                            <input name='fname' class="form-control" id="exampleInputIcon4" type="text" aria-label="email adress">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">Last Name</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fa-solid fa-user-ninja"></span></span>
+                                            </div>
+                                            <input name="lname" class="form-control" id="exampleInputIcon4" type="text" aria-label="email adress">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">User Name</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fa-solid fa-user-graduate"></span></span>
+                                            </div>
+                                            <input name="username" class="form-control" id="exampleInputIcon4" type="text" aria-label="email adress">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">Email</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fas fa-envelope"></span></span>
+                                            </div>
+                                            <input name="email" class="form-control" id="exampleInputIcon4" type="email" aria-label="email adress">
+                                        </div>
+                                    </div>
+                                    <!-- End of Form -->
+                                    <div class="form-group">
+                                        <!-- Form -->
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword7">Password</label>
+                                            <div class="input-group mb-4">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                                </div>
+                                                <input name="password1" class="form-control" id="exampleInputPassword7" placeholder="Password" type="password" aria-label="Password" required>
+                                            </div>
+                                        </div>
+                                        <!-- End of Form -->
+                                        <!-- Form -->
+                                        <div class="form-group">
+                                            <label for="exampleConfirmPassword7">Confirm Password</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                                </div>
+                                                <input name="password2" class="form-control" id="exampleConfirmPassword7" placeholder="Confirm password" type="password" aria-label="Password" required>
+                                            </div>
+                                        </div>
+                                        <!-- End of Form -->
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                                            <label class="form-check-label" for="defaultCheck6">
+                                                I agree to the <a href="#">terms and conditions</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+                                </form>
+                              <!--  <div class="mt-3 mb-4 text-center">
+                                    <span class="font-weight-normal">or</span>
+                                </div>
+                                <div class="btn-wrapper my-4 text-center">
+                                    <button class="btn btn-primary btn-icon-only text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
+                                        <span aria-hidden="true" class="fab fa-facebook-f"></span>
+                                    </button>
+                                    <button class="btn btn-primary btn-icon-only text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
+                                        <span aria-hidden="true" class="fab fa-twitter"></span>
+                                    </button>
+                                    <button class="btn btn-primary btn-icon-only text-facebook" type="button" aria-label="github button" title="github button">
+                                        <span aria-hidden="true" class="fab fa-github"></span>
+                                    </button>
+                                </div>-->
+                                <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
+                                    <span class="font-weight-normal">
+                                        Already have an account?
+                                        <a href="{% url 'login' %}" class="font-weight-bold">Login here</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <!-- Core -->
+       <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+       <script src="{% static 'vendor/popper.js/dist/umd/popper.min.js' %}"></script>
+       <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+       <script src="{% static 'vendor/headroom.js/dist/headroom.min.js' %}"></script>
+       
+       <!-- Vendor JS -->
+       <script src="{% static 'vendor/onscreen/dist/on-screen.umd.min.js' %}"></script>
+       <script src="{% static 'vendor/nouislider/distribute/nouislider.min.js' %}"></script>
+       <script src="{% static 'vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+       <script src="{% static 'vendor/waypoints/lib/jquery.waypoints.min.js' %}"></script>
+       <script src="{% static 'vendor/jarallax/dist/jarallax.min.js' %}"></script>
+       <script src="{% static 'vendor/jquery.counterup/jquery.counterup.min.js' %}"></script>
+       <script src="{% static 'vendor/jquery-countdown/dist/jquery.countdown.min.js' %}"></script>
+       <script src="{% static 'vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js' %}"></script>
+       <script src="{% static 'vendor/prismjs/prism.js' %}"></script>
+       
+       <script async defer src="https://buttons.github.io/buttons.js"></script>
+       
+       <!-- Neumorphism JS -->
+       <script src="{% static 'assets/js/neumorphism.js' %}"></script>
+       <script src="https://kit.fontawesome.com/50a9069d15.js" crossorigin="anonymous"></script>
+       
+       
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!--
+
+=========================================================
+* Innoovatum
+=========================================================
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Primary Meta Tags -->
+<title>Innoovatum Search Engine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="Innoovatum">
+<meta name="author" content="Innoovatum">
+
+<link rel="canonical" href="https://themesberg.com/product/ui-kits/neumorphism-ui/" />
+
+<!--  Social tags -->
+<meta name="keywords" content="Innoovatum, Search engine, Engineering, cse,civil, automobile,EC,EE,IOT">
+<meta name="description" content="Engineering Search Engine">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Innoovatum Search Engine">
+<meta itemprop="description" content="Making engineering education a practical approach">
+<meta itemprop="image" content="">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="search engine">
+<meta name="twitter:site" content="@Innoovatum">
+<meta name="twitter:title" content="Innoovatum Search Engine">
+<meta name="twitter:description" content="Making engineering education a practical approach">
+<meta name="twitter:creator" content="@innoovatum">
+<meta name="twitter:image" content="">
+
+<!-- Open Graph data -->
+<meta property="fb:app_id" content="Innoovatum">
+<meta property="og:title" content="Innoovatum Search Engine" />
+<meta property="og:type" content="Search" />
+<meta property="og:url" content="https://innoovatum.com" />
+<meta property="og:image" content=""/>
+<meta property="og:description" content="Making engineering education a practical approach" />
+<meta property="og:site_name" content="Innoovatum" />
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/img/favicon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+<link rel="manifest" href="{% static 'assets/img/favicon/site.webmanifest' %}">
+<link rel="mask-icon" href="{% static 'assets/img/favicon/safari-pinned-tab.svg' %}" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Fontawesome -->
+<link type="text/css" href="{% static 'vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+
+<!-- Pixel CSS -->
+<link type="text/css" href="{% static 'css/neumorphism.css' %}" rel="stylesheet">
+
+<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+</head>
+
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
+        <div class="container position-relative">
+            <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="">
+                <img class="navbar-brand-dark" src="{% static 'assets/img/brand/dark.svg' %}" alt="Logo light">
+                <img class="navbar-brand-light" src="{% static 'assets/img/brand/dark.svg' %}" alt="Logo dark">
+            </a>
+            <div class="navbar-collapse collapse" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
+                                <img src="{% static 'assets/img/brand/dark.svg' %}" alt="Themesberg logo">
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <a href="#navbar_global" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="d-flex align-items-center">
+              {% if request.user.is_authenticated %}
+              <a href="{% url 'dashboard' %}" target="_blank" class="btn btn-primary text-secondary mr-3">Dashboard <i class="fa-solid fa-gauge"></i></a>
+              <a href="{% url 'logout' %}" target="_blank" class="btn btn-primary text-secondary mr-3">Logout <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+              {% else %}
+              <a href="{% url 'login' %}" target="_blank" class="btn btn-primary text-secondary mr-3">Sign In <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+              <a href="{% url 'create_user' %}" target="_blank" class="btn btn-primary text-secondary d-none d-md-inline-block">Sign Up <i class="fa-solid fa-user-plus"></i></a>
+              {% endif %}  
+              <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container z-2">
+                <div class="row justify-content-center text-center pt-6">
+                    <div class="col-lg-12 col-xl-12">
+                        <!--Search-->
+                        <form method="get" action="/search/" class="autocomplete-me">
+                        <div class="input-group mb-4">
+                        <input class="form-control" type="search" id="id_q" name="q" autocomplete="off" aria-label="search">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><span class="fa-solid fa-magnifying-glass"></span></span>
+                        </div>
+                        </div>
+                        </form>
+
+                        <!--End Search-->
+                    </div>
+                </div>
+            </div>
+<hr style="margin-top: 1px;margin-bottom: 1px;">
+</header>
+    <main>
+
+        <!-- Hero -->
+        <section class=" bg-soft pb-2 mt-4 overflow-hidden z-2" >
+            <div class="container">
+                
+                <h5 style="margin-left:5px">Search Results</h5>
+               
+                {% if query %}
+                {% for result in page.object_list %}
+                
+             <!--start of cards here-->   
+            <div class="col-12 col-lg-12 mt2">
+                
+                <div class="card bg-primary border-light mb-2">
+                    <div class="card-body px-3 py-3 text-md-left">
+                        <div class="row">
+                            <!--url content-->
+                            <a href="/posts/{{ result.object.slug }}">
+                            <div class="col-md-12">
+                                <h4 class="mb-1 text-secondary">{{ result.object.title }}</h4>
+                                <h6 class="mb-1 text-success">/posts/{{ result.object.slug }}</h6>
+                                <p class="mb-0 text-muted">
+                                    {{ result.object.detail |safe|truncatewords:"30"|linebreaks }}
+                                </p>
+                            </div>
+                            </a>
+                            <!--url content end-->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--End Of Cards Here-->
+            {% empty %}
+                <p>No results found.</p>
+            {% endfor %}
+
+            
+
+            {% if page.has_previous or page.has_next %}
+                <div>
+                    {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+                    |
+                    {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+                </div>
+            {% endif %}
+        {% else %}
+            {# search something like engineering? #}
+        {% endif %}
+
+            
+            </div>
+        </section>
+        
+
+    </main>
+
+<!--Footer-->
+
+    <div class="container">
+  <footer class="py-4 my-7">
+    <ul class="nav justify-content-center border-bottom">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Workshops</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Mentoring</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">IOT</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Web Consulting</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Policies</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Terms</a></li>
+    </ul>
+    <p class="text-center text-muted">&copy; Innoovatum</p>
+  </footer>
+</div>
+
+<!--Footer-->
+
+      <!-- Core -->
+<script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/popper.js/dist/umd/popper.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'vendor/headroom.js/dist/headroom.min.js' %}"></script>
+
+<!-- Vendor JS -->
+<script src="{% static 'vendor/onscreen/dist/on-screen.umd.min.js' %}"></script>
+<script src="{% static 'vendor/nouislider/distribute/nouislider.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+<script src="{% static 'vendor/waypoints/lib/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'vendor/jarallax/dist/jarallax.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.counterup/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'vendor/jquery-countdown/dist/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js' %}"></script>
+<script src="{% static 'vendor/prismjs/prism.js' %}"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- Neumorphism JS -->
+<script src="{% static 'assets/js/neumorphism.js' %}"></script>
+<script src="https://kit.fontawesome.com/50a9069d15.js" crossorigin="anonymous"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+    // In a perfect world, this would be its own library file that got included
+    // on the page and only the ``$(document).ready(...)`` below would be present.
+    // But this is an example.
+    var Autocomplete = function(options) {
+      this.form_selector = options.form_selector
+      this.url = options.url || '/search/autocomplete/'
+      this.delay = parseInt(options.delay || 300)
+      this.minimum_length = parseInt(options.minimum_length || 3)
+      this.form_elem = null
+      this.query_box = null
+    }
+
+    Autocomplete.prototype.setup = function() {
+      var self = this
+
+      this.form_elem = $(this.form_selector)
+      this.query_box = this.form_elem.find('input[name=q]')
+
+      // Watch the input box.
+      this.query_box.on('keyup', function() {
+        var query = self.query_box.val()
+
+        if(query.length < self.minimum_length) {
+          return false
+        }
+
+        self.fetch(query)
+      })
+
+      // On selecting a result, populate the search field.
+      this.form_elem.on('click', '.ac-result', function(ev) {
+        self.query_box.val($(this).text())
+        $('.ac-results').remove()
+        return false
+      })
+    }
+
+    Autocomplete.prototype.fetch = function(query) {
+      var self = this
+
+      $.ajax({
+        url: this.url
+      , data: {
+          'q': query
+        }
+      , success: function(data) {
+          self.show_results(data)
+        }
+      })
+    }
+
+    Autocomplete.prototype.show_results = function(data) {
+      // Remove any existing results.
+      $('.ac-results').remove()
+
+      var results = data.results || []
+      var results_wrapper = $('<div class="ac-results" style="width:100%;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;padding: 2px 16px;margin-top:2px;"></div>')
+      var base_elem = $('<div class="result-wrapper" style="width:100%;padding: 2px 16px;border-bottom:1px solid #fff"><a href="#" class="ac-result"></a></div>')
+
+      if(results.length > 0) {
+        for(var res_offset in results) {
+          var elem = base_elem.clone()
+          // Don't use .html(...) here, as you open yourself to XSS.
+          // Really, you should use some form of templating.
+          elem.find('.ac-result').text(results[res_offset])
+          results_wrapper.append(elem)
+        }
+      }
+      else {
+        var elem = base_elem.clone()
+        elem.text("")
+        results_wrapper.append(elem)
+      }
+
+      this.query_box.after(results_wrapper)
+    }
+
+    $(document).ready(function() {
+      window.autocomplete = new Autocomplete({
+        form_selector: '.autocomplete-me'
+      })
+      window.autocomplete.setup()
+    })
+  </script>
+
+
+</body>
+
+</html>
